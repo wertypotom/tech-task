@@ -1,13 +1,11 @@
-import axios from 'axios';
+import { apiClient } from '@/lib/apiClient';
 import type { AuthUser } from '@/shared/store';
-
-const BASE_URL = 'https://dummyjson.com';
 
 export const loginUser = async (
   username: string,
   password: string,
 ): Promise<AuthUser> => {
-  const { data } = await axios.post<AuthUser>(`${BASE_URL}/auth/login`, {
+  const { data } = await apiClient.post<AuthUser>('/auth/login', {
     username,
     password,
     expiresInMins: 30,

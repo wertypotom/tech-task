@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 130px); // account for header + footer
+  padding: 2rem 1rem;
+  background: #f0f2f5;
+}

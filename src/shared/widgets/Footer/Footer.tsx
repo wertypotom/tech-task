@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useAuthStore } from '@/features/auth/store/auth.store';
+import { useAuthStore } from '@/shared/store';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {

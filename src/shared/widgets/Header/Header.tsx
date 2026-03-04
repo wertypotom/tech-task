@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useAuthStore } from '@/features/auth/store/auth.store';
+import { useAuthStore } from '@/shared/store';
 import styles from './Header.module.scss';
 
 export const Header = () => {

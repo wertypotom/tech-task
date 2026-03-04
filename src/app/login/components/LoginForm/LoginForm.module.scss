@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 10%);
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 0.5rem;
+    color: #1a1a2e;
+  }
+
+  .apiError {
+    padding: 0.75rem 1rem;
+    background: #fff3f3;
+    border: 1px solid #f5c2c7;
+    color: #dc3545;
+    border-radius: 8px;
+    font-size: 0.875rem;
+  }
+
+  .submit {
+    padding: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+
+    &:hover:not(:disabled) {
+      background: #16213e;
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+}

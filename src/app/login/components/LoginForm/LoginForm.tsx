@@ -56,7 +56,12 @@ export const LoginForm = () => {
         {...register('password')}
       />
 
-      <button type="submit" disabled={isLoading} className={styles.submit}>
+      <button
+        type="submit"
+        disabled={isLoading}
+        aria-busy={isLoading}
+        className={styles.submit}
+      >
         {isLoading ? <Loader /> : 'Login'}
       </button>
     </form>

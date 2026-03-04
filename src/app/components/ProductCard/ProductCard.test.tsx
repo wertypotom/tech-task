@@ -29,7 +29,7 @@ describe('ProductCard', () => {
   it('shows Add to Cart when authenticated', () => {
     render(<ProductCard product={mockProduct} isAuthenticated={true} />);
     expect(
-      screen.getByRole('button', { name: /add to cart/i }),
+      screen.getByRole('button', { name: /Add Test Mascara to cart/i }),
     ).toBeInTheDocument();
   });
 });

@@ -13,7 +13,7 @@ export const Header = () => {
       <div className={styles.logo}>
         <Link href="/">Dummy Store</Link>
       </div>
-      <nav className={styles.nav}>
+      <nav className={styles.nav} aria-label="Main Navigation">
         {isAuthenticated ? (
           <div className={styles.userMenu}>
             <span className={styles.username}>

@@ -20,7 +20,11 @@ export const ProductCard = ({ product, isAuthenticated }: ProductCardProps) => {
         <div className={styles.footer}>
           <span className={styles.price}>${price.toFixed(2)}</span>
           {isAuthenticated && (
-            <button className={styles.addToCart} type="button">
+            <button
+              className={styles.addToCart}
+              type="button"
+              aria-label={`Add ${title} to cart`}
+            >
               Add to cart
             </button>
           )}

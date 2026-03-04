@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    text-decoration: none;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    .userMenu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .username {
+        color: #495057;
+      }
+
+      .logoutBtn {
+        background: transparent;
+        border: 1px solid #dc3545;
+        color: #dc3545;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: #dc3545;
+          color: white;
+        }
+      }
+    }
+
+    .loginLink {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

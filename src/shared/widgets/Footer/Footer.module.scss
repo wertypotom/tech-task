@@ -1,0 +1,17 @@
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  color: #6c757d;
+  font-size: 0.9rem;
+
+  p {
+    margin: 0;
+  }
+
+  .loggedAs {
+    margin-left: 0.5rem;
+    font-weight: 500;
+  }
+}

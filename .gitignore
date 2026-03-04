@@ -12,6 +12,8 @@
 .agent
 /plans
 progress.txt
+.eslint.config.mjs
+.eslintignore
 
 # testing
 /coverage

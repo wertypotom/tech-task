@@ -28,6 +28,12 @@ export const LoginForm = () => {
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
       <h1 className={styles.title}>Login</h1>
 
+      <p className={styles.hint}>
+        <strong>Demo credentials:</strong>
+        <br />
+        Username: <code>emilys</code> | Password: <code>emilyspass</code>
+      </p>
+
       <FormInput
         id="username"
         label="Username"

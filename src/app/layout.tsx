@@ -16,7 +16,7 @@ import { Header, Footer } from '@/shared/widgets';
 
 export const metadata: Metadata = {
   title: 'Dummy Store',
-  description: 'Test Ecommerce store using DummyJSON and Supabase',
+  description: 'Test Ecommerce store using DummyJSON',
 };
 
 export default function RootLayout({

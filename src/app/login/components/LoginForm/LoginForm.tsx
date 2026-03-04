@@ -3,14 +3,14 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Loader } from '@/shared/ui';
+import { Loader, Toast } from '@/shared/ui';
 import { FormInput } from '../../ui';
 import { loginSchema, LoginFormValues } from '../../types';
 import { useLogin } from '../../hooks';
 import styles from './LoginForm.module.scss';
 
 export const LoginForm = () => {
-  const { handleLogin, isLoading, error } = useLogin();
+  const { handleLogin, isLoading, error, setError } = useLogin();
 
   const {
     register,
@@ -26,6 +26,10 @@ export const LoginForm = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
+      {error && (
+        <Toast message={error} onClose={() => setError(null)} duration={4000} />
+      )}
+
       <h1 className={styles.title}>Login</h1>
 
       <p className={styles.hint}>
@@ -51,8 +55,6 @@ export const LoginForm = () => {
         error={errors.password?.message}
         {...register('password')}
       />
-
-      {error && <div className={styles.apiError}>{error}</div>}
 
       <button type="submit" disabled={isLoading} className={styles.submit}>
         {isLoading ? <Loader /> : 'Login'}

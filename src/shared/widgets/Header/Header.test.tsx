@@ -30,7 +30,7 @@ describe('Header', () => {
   it('shows user info and Logout button when authenticated', () => {
     useAuthStore.setState({ user: mockUser, isAuthenticated: true });
     render(<Header />);
-    expect(screen.getByText(/emilys/i)).toBeInTheDocument();
+    expect(screen.getByText(/Emily Johnson/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /logout/i })).toBeInTheDocument();
   });
 });

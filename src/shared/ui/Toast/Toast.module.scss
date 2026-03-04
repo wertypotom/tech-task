@@ -1,0 +1,28 @@
+.toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  z-index: 1050;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+
+  to {
+    top: 24px;
+    opacity: 1;
+  }
+}

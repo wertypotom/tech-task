@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Loader } from '@/shared/ui';
+import { Loader, ErrorMessage } from '@/shared/ui';
 import { ProductGrid } from './components';
 import { useProducts } from './hooks';
 import styles from './page.module.scss';
@@ -19,7 +19,11 @@ export default function HomePage() {
         </div>
       )}
 
-      {error && <p className={styles.error}>{error}</p>}
+      {error && (
+        <div className={styles.center}>
+          <ErrorMessage title="Unable to load products" message={error} />
+        </div>
+      )}
 
       {!isLoading && !error && <ProductGrid products={products} />}
     </div>

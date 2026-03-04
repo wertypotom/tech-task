@@ -17,7 +17,7 @@ export const Header = () => {
         {isAuthenticated ? (
           <div className={styles.userMenu}>
             <span className={styles.username}>
-              {user?.username} ({user?.email})
+              {user?.firstName} {user?.lastName}
             </span>
             <button onClick={logout} className={styles.logoutBtn}>
               Logout
